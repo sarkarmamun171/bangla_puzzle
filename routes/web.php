@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubcategoryController;
 
 /*
@@ -45,3 +46,7 @@ Route::post('/subcategory/store',[SubcategoryController::class,'store_subcategor
 Route::get('/subcategory/edit/{id}',[SubcategoryController::class,'edit_subcategory'])->name('edit.subcategory');
 Route::post('/subcategory/update/{id}',[SubcategoryController::class,'update_subcategory'])->name('update.subcategory');
 Route::get('/subcategory/delete/{id}',[SubcategoryController::class,'delete_subcategory'])->name('delete.subcategory');
+
+//Product Details
+Route::get('product/index',[ProductController::class,'index'])->name('product.index');
+Route::post('/getSubcategory', [ProductController::class, 'getSubcategory']);

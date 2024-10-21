@@ -231,6 +231,14 @@
                             <li><a href="{{ route('add.subcategory') }}">Add Subcategory</a></li>
                         </ul>
                     </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="fa-solid fa-icons"></i>
+							<span class="nav-text">Product</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('product.index') }}">Add Product</a></li>
+                        </ul>
+                    </li>
 
 			</div>
         </div>
