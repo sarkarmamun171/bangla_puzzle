@@ -4,10 +4,10 @@
         <div class="card">
             <div class="card-header">
                 <h3>Add New Product</h3>
-                <a href="#" class="btn btn-primary"><i class="fa fa-list"></i> Product List</a>
+                <a href="{{ route('product.list') }}" class="btn btn-primary"><i class="fa fa-list"></i> Product List</a>
             </div>
             <div class="card-body">
-                <form action="#" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('store.product') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @if (session('success'))
                         <div class="alert alert-success">{{ session('success') }}</div>
@@ -16,7 +16,7 @@
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Category</label>
-                                <select name="category" id="category" class="form-control">
+                                <select name="category_id" id="category" class="form-control">
                                     <option value="">Seclect Category</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->category_name }}</option>
@@ -30,7 +30,7 @@
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Sub Category</label>
-                                <select name="subcategory" id="subcategory" class="form-control">
+                                <select name="subcategory_id" id="subcategory" class="form-control">
                                     <option value="">Seclect Sub Category</option>
                                     @foreach ($subcategories as $subcategory)
                                         <option value="{{ $subcategory->id }}">{{ $subcategory->Subcategory_name }}</option>

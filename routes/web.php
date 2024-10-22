@@ -50,3 +50,9 @@ Route::get('/subcategory/delete/{id}',[SubcategoryController::class,'delete_subc
 //Product Details
 Route::get('product/index',[ProductController::class,'index'])->name('product.index');
 Route::post('/getSubcategory',[ProductController::class,'getSubcategory']);
+Route::post('/product/store',[ProductController::class,'store_product'])->name('store.product');
+Route::get('/product/list',[ProductController::class,'list_product'])->name('product.list');
+Route::get('/product/edit/{id}',[ProductController::class,'edit_product'])->name('product.edit');
+Route::post('/getSubcategory2',[ProductController::class,'getSubcategory2']);
+Route::post('/product/update/{id}',[ProductController::class,'update_product'])->name('product.update');
+Route::get('/product/delete{id}',[ProductController::class,'delete_product'])->name('product.delete');

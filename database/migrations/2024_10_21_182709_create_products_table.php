@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('discount')->nullable();
             $table->integer('after_discount')->nullable();
-            $table->string('short_desp')->nullable();
-            $table->string('long_desp')->nullable();
+            $table->longText('short_desp')->nullable();
+            $table->longText('long_desp')->nullable();
             $table->string('preview_img');
             $table->string('slug');
             $table->timestamps();
