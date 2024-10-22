@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubcategoryController;
 
@@ -32,6 +33,12 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+//Frontend Details
+Route::get('/',[FrontendController::class,'front_index'])->name('front.index');
+Route::get('/category/index',[FrontendController::class,'index'])->name('index');
+Route::get('/category/product/{id}',[FrontendController::class,'category_products'])->name('category.product');
+Route::get('/subcategory/product/{id}',[FrontendController::class,'subcategory_products'])->name('subcategory.product');
+Route::get('/product/details/{slug}',[FrontendController::class,'product_detail'])->name('product.detail');
 
 //Category
 Route::get('/category',[CategoryController::class,'add_category'])->name('add.category');
