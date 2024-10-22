@@ -49,4 +49,4 @@ Route::get('/subcategory/delete/{id}',[SubcategoryController::class,'delete_subc
 
 //Product Details
 Route::get('product/index',[ProductController::class,'index'])->name('product.index');
-Route::post('/getSubcategory', [ProductController::class, 'getSubcategory']);
+Route::post('/getSubcategory',[ProductController::class,'getSubcategory']);

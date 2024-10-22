@@ -16,12 +16,14 @@ class ProductController extends Controller
             'subcategories'=>$subcategories,
         ]);
     }
-    function getSubcategory(Request $request){
-        $str = '<option value="">Select Sub Category</option>';
-        $subcategories = Subcategory::where('category_id', $request->category_id)->get();
-        foreach($subcategories as $subcategory){
-            $str .= '<option value="'.$subcategory->id.'">'.$subcategory->subcategory_name.'</option>';
-        }
-        echo $str;
-    }
+    public function getSubcategory(Request $request){
+        // echo $request->category_id;
+         $str = '<option value="">Select Category</option>';
+         $subcategories  = Subcategory::where('category_id',$request->category_id)->get();
+        foreach ($subcategories as $subcategory) {
+           // echo $subcategory;
+              $str .='<option value="'.$subcategory->id.'">'.$subcategory->Subcategory_name.'</option>';
+         }
+         echo $str;
+      }
 }
