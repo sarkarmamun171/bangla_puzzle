@@ -36,7 +36,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-2">
                             <div class="navbar-header">
-                                <a class="navbar-brand" href="index.html"><img src="{{ asset('frontend') }}/images/logo.svg"
+                                <a class="navbar-brand" href="#"><img src="{{ asset('frontend') }}/images/logo.svg"
                                         alt="logo"></a>
                             </div>
                         </div>
@@ -231,14 +231,14 @@
                                         <del class="old-price">&#2547;{{ $product->price }}</del>
                                     </div>
                                     <div class="shop-btn">
-                                        <a class="theme-btn-s2" href="">Shop Now</a>
+                                        <a class="theme-btn-s2" href="{{ route('product.detail',$product->slug) }}">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         @endforeach
                         <div class="more-btn">
-                            <a class="theme-btn-s2" href="product.html">View All</a>
+                            <a class="theme-btn-s2" href="#">View All</a>
                         </div>
                     </div>
                 </div>
